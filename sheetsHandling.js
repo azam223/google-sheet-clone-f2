@@ -35,7 +35,7 @@ function handleSheetRemoval(sheet) {
         }
 
         let response = confirm("Your sheet will be removed permanently, Are you sure ?");
-      
+       
         if (response === false) return;
         let sheetIdx = Number(sheet.getAttribute("id"));
         // DB 
@@ -46,7 +46,7 @@ function handleSheetRemoval(sheet) {
         handleSheetUIRemoval(sheet);
 
         // By default DB to sheet 1 (active)
-        
+       
         sheetDB = collectedSheetDB[0];
         graphComponentMatrix = collectedGraphComponent[0];
         handleSheetProperties();
@@ -58,7 +58,7 @@ function handleSheetUIRemoval(sheet) {
     sheet.remove();
     let allSheetFolders = document.querySelectorAll(".sheet-folder");
     for (let i = 0; i < allSheetFolders.length; i++)
-    
+   
      {
         allSheetFolders[i].setAttribute("id", i);
         let sheetContent = allSheetFolders[i].querySelector(".sheet-content");
